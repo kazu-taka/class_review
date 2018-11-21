@@ -73,11 +73,21 @@ class Customer:
 # print(jiro.entry_fee())
 
 # B-7
+# ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
+# print(ken.info("\t"))  # "Ken Tanaka,15,1000" という値を返す
+#
+# tom = Customer(first_name="Tom", family_name="Ford", age=57)
+# print(ken.info("\t"))  # "Tom Ford,57,1500" という値を返す
+#
+# ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
+# print(ieyasu.info("\t"))
+
+# B-8
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
-print(ken.info("\t"))  # "Ken Tanaka,15,1000" という値を返す
+print(ken.info("|"))  # "Ken Tanaka,15,1000" という値を返す
 
 tom = Customer(first_name="Tom", family_name="Ford", age=57)
-print(ken.info("\t"))  # "Tom Ford,57,1500" という値を返す
+print(ken.info("|"))  # "Tom Ford,57,1500" という値を返す
 
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
-print(ieyasu.info("\t"))
+print(ieyasu.info("|"))
