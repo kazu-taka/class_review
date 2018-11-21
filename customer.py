@@ -8,6 +8,9 @@ class Customer:
         return f"{self.first_name} {self.family_name}"
 
     def entry_fee(self):
+        if self.age <= 3:
+            return 0
+
         if self.age < 20:
             return 1000
 
@@ -49,11 +52,15 @@ class Customer:
 # print(ieyasu.entry_fee())  # 1200 という値を返す
 
 # B-4
-ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
-print(ken.info_csv())  # "Ken Tanaka,15,1000" という値を返す
+# ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
+# print(ken.info_csv())  # "Ken Tanaka,15,1000" という値を返す
+#
+# tom = Customer(first_name="Tom", family_name="Ford", age=57)
+# print(ken.info_csv())  # "Tom Ford,57,1500" という値を返す
+#
+# ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
+# print(ieyasu.info_csv())  # "Ieyasu Tokugawa,73,1200" という値を返す
 
-tom = Customer(first_name="Tom", family_name="Ford", age=57)
-print(ken.info_csv())  # "Tom Ford,57,1500" という値を返す
-
-ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
-print(ieyasu.info_csv())  # "Ieyasu Tokugawa,73,1200" という値を返す
+# B-5
+mike = Customer(first_name="Mike", family_name="Suzuki", age=3)
+print(mike.entry_fee())
