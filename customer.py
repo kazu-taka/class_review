@@ -17,8 +17,11 @@ class Customer:
         if 20 <= self.age < 65:
             return 1500
 
-        if 65 <= self.age:
+        if 65 <= self.age < 75:
             return 1200
+
+        if 75 <= self.age:
+            return 500
 
     def info_csv(self):
         return f"{self.full_name()}, {self.age}, {self.entry_fee()}"
@@ -62,5 +65,9 @@ class Customer:
 # print(ieyasu.info_csv())  # "Ieyasu Tokugawa,73,1200" という値を返す
 
 # B-5
-mike = Customer(first_name="Mike", family_name="Suzuki", age=3)
-print(mike.entry_fee())
+# mike = Customer(first_name="Mike", family_name="Suzuki", age=3)
+# print(mike.entry_fee())
+
+# B-6
+jiro = Customer(first_name="Jiro", family_name="Sasaki", age=75)
+print(jiro.entry_fee())
