@@ -23,8 +23,8 @@ class Customer:
         if 75 <= self.age:
             return 500
 
-    def info_csv(self):
-        return f"{self.full_name()}, {self.age}, {self.entry_fee()}"
+    def info(self, delimiter=","):
+        return f"{self.full_name()}{delimiter}{self.age}{delimiter}{self.entry_fee()}"
 
 
 # B-1
@@ -69,5 +69,15 @@ class Customer:
 # print(mike.entry_fee())
 
 # B-6
-jiro = Customer(first_name="Jiro", family_name="Sasaki", age=75)
-print(jiro.entry_fee())
+# jiro = Customer(first_name="Jiro", family_name="Sasaki", age=75)
+# print(jiro.entry_fee())
+
+# B-7
+ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
+print(ken.info("\t"))  # "Ken Tanaka,15,1000" という値を返す
+
+tom = Customer(first_name="Tom", family_name="Ford", age=57)
+print(ken.info("\t"))  # "Tom Ford,57,1500" という値を返す
+
+ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
+print(ieyasu.info("\t"))
